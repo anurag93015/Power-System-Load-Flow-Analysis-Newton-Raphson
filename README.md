@@ -13,6 +13,17 @@ This project implements the **Newton-Raphson Load Flow Algorithm** in MATLAB for
 
 The project is designed with a modular architecture, making it easy to extend to larger IEEE test systems and additional load flow methods.
 
+## 📌 Project Summary
+
+| Category | Details |
+|----------|---------|
+| **Language** | MATLAB |
+| **Method** | Newton-Raphson Load Flow |
+| **System** | 3-Bus Power System |
+| **Domain** | Power System Analysis |
+| **Output** | Bus Voltages, Line Flow, Losses, Voltage Profile |
+| **Status** | Completed |
+
 ## ✨ Features
 
 - Automatic Y-Bus matrix formation
@@ -24,7 +35,7 @@ The project is designed with a modular architecture, making it easy to extend to
 - Automatic result export to text file
 - Modular MATLAB implementation
 
-- ## 📂 Repository Structure
+## 📂 Repository Structure
 
 ```text
 Power-System-Load-Flow-Analysis-using-Newton-Raphson
@@ -54,6 +65,20 @@ Power-System-Load-Flow-Analysis-using-Newton-Raphson
 ├── README.md
 └── CHANGELOG.md
 ```
+
+## 🧩 Code Modules
+
+| File | Purpose |
+|------|----------|
+| `main.m` | Executes the complete load flow analysis |
+| `line_data.m` | Defines transmission line parameters |
+| `create_ybus.m` | Generates the Y-Bus admittance matrix |
+| `power_calculation.m` | Computes active and reactive power |
+| `jacobian.m` | Forms the Jacobian matrix |
+| `newton_raphson.m` | Performs iterative voltage updates |
+| `line_flow.m` | Calculates line power flow and losses |
+| `voltage_profile.m` | Plots bus voltage magnitudes |
+| `save_results.m` | Exports results to a text file |
 
 ## ⚡ System Model
 
@@ -118,7 +143,7 @@ The simulation automatically:
 - Generates the voltage profile
 - Saves the results to `Results/load_flow_results.txt`
 
-- ## 📊 Results
+## 📊 Results
 
 The implementation successfully computes:
 
@@ -130,6 +155,18 @@ The implementation successfully computes:
 - Voltage profile
 
 The Newton-Raphson algorithm converges within a few iterations for the implemented test system.
+
+## 📋 Sample Output
+
+After execution, the program generates:
+
+- ✅ Y-Bus Admittance Matrix
+- ✅ Bus Voltage Magnitudes
+- ✅ Voltage Angles
+- ✅ Line Power Flow
+- ✅ Active & Reactive Power Losses
+- ✅ Voltage Profile Plot
+- ✅ `load_flow_results.txt`
 
 ## 🖼️ Output Screenshots
 
