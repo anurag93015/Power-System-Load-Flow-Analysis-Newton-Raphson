@@ -1,2 +1,6 @@
-# Power-System-Load-Flow-Analysis-Newton-Raphson
-MATLAB implementation of Newton-Raphson Load Flow Analysis for power systems with Y-Bus formation, line power flow, voltage profile visualization, and transmission loss calculation.
+# ⚡ Power System Load Flow Analysis using Newton-Raphson Method
+
+![MATLAB](https://img.shields.io/badge/MATLAB-R2023-blue)
+![Power Systems](https://img.shields.io/badge/Power-System-green)
+![Numerical Methods](https://img.shields.io/badge/Newton-Raphson-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow)
