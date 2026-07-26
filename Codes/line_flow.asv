@@ -1,0 +1,107 @@
+function line_flow(lineData, V, delta)
+
+%----------------------------------------
+% Line Power Flow Calculation
+%----------------------------------------
+
+numLines = size(lineData,1);
+
+disp('=======================================')
+disp('LINE POWER FLOW RESULTS')
+disp('=======================================')
+
+totalPloss = 0;
+totalQloss = 0;
+
+fprintf('\n');
+fprintf('--------------------------------------------------------------------------\n');
+fprintf('From  To      Pij      Qij      Pji      Qji     Ploss    Qloss\n');
+fprintf('--------------------------------------------------------------------------\n');
+
+for k = 1:numLines
+
+    from = lineData(k,1);
+    to   = lineData(k,2);
+
+    R = lineData(k,3);
+    X = lineData(k,4);
+
+    %----------------------------------------
+    % Line Admittance
+    %----------------------------------------
+
+    Z = R + 1i*X;
+    Y = 1/Z;
+
+    %----------------------------------------
+    % Complex Bus Voltages
+    %----------------------------------------
+
+    Vi = V(from) * exp(1i * delta(from));
+    Vj = V(to)   * exp(1i * delta(to));
+
+    fprintf('\nLine %d -> %d\n\n', from, to);
+
+    fprintf('Line Admittance = %.4f %+.4fi\n', real(Y), imag(Y));
+
+    fprintf('Vi = %.4f %+.4fi\n', real(Vi), imag(Vi));
+    fprintf('Vj = %.4f %+.4fi\n', real(Vj), imag(Vj));
+
+    %----------------------------------------
+    % Line Current
+    %----------------------------------------
+
+    Iij = Y * (Vi - Vj);
+
+    fprintf('Iij = %.4f %+.4fi\n', real(Iij), imag(Iij));
+
+    %----------------------------------------
+    % Complex Power Flow
+    %----------------------------------------
+
+    Sij = Vi * conj(Iij);
+
+    Pij = real(Sij);
+    Qij = imag(Sij);
+
+    fprintf('P = %.4f pu\n', Pij);
+    fprintf('Q = %.4f pu\n', Qij);
+
+    %----------------------------------------
+    % Reverse Line Current
+    %----------------------------------------
+
+    Iji = Y * (Vj - Vi);
+
+    %----------------------------------------
+    % Reverse Complex Power
+    %----------------------------------------
+
+    Sji = Vj * conj(Iji);
+
+    Pji = real(Sji);
+    Qji = imag(Sji);
+
+    fprintf('\nReverse Flow (%d -> %d)\n', to, from);
+    fprintf('P = %.4f pu\n', Pji);
+    fprintf('Q = %.4f pu\n', Qji);
+
+    %----------------------------------------
+    % Line Loss
+    %----------------------------------------
+
+    Ploss = Pij + Pji;
+    Qloss = Qij + Qji;
+
+    totalPloss = totalPloss + Ploss;
+    totalQloss = totalQloss + Qloss;
+
+    fprintf('\nLine Loss\n');
+    fprintf('P Loss = %.6f pu\n', Ploss);
+    fprintf('Q Loss = %.6f pu\n', Qloss);
+
+    disp('---------------------------------------')
+
+end
+
+end

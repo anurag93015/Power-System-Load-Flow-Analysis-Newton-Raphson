@@ -1,0 +1,35 @@
+function [P,Q] = power_calculation(Ybus,V,delta)
+
+%----------------------------------------
+% Power Calculation Function
+% Calculates Active Power (P)
+% and Reactive Power (Q)
+%----------------------------------------
+
+n = length(V);
+
+P = zeros(n,1);
+Q = zeros(n,1);
+
+G = real(Ybus);
+B = imag(Ybus);
+
+for i = 1:n
+
+    for j = 1:n
+
+        angle = delta(i) - delta(j);
+
+        % Active Power
+        P(i) = P(i) + V(i)*V(j)*...
+            (G(i,j)*cosd(angle) + B(i,j)*sind(angle));
+
+        % Reactive Power
+        Q(i) = Q(i) + V(i)*V(j)*...
+            (G(i,j)*sin(angle) - B(i,j)*cos(angle));
+
+    end
+
+end
+
+end
