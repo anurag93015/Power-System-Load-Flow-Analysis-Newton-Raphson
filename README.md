@@ -124,7 +124,7 @@ The Jacobian matrix is used to update bus voltage magnitudes and voltage angles 
 ## 🔄 Project Workflow
 
 <p align="center">
-<img src="Images/project_workflow.png" width="900">
+<img src="Images/project_workflow.png" width="500">
 </p>
 
 ## 🚀 Getting Started
@@ -187,7 +187,7 @@ After execution, the program generates:
 ### Y-Bus Matrix
 
 <p align="center">
-<img src="Images/ybus_matrix.png" width="400">
+<img src="Images/ybus_matrix.png" width="600">
 </p>
 
 ---
@@ -203,7 +203,7 @@ After execution, the program generates:
 ### Line Flow Results
 
 <p align="center">
-<img src="Images/line_flow_results.png" width="400">
+<img src="Images/line_flow_results.png" width="600">
 </p>
 
 ## 👨‍💻 Author
