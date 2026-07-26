@@ -60,7 +60,7 @@ Power-System-Load-Flow-Analysis-using-Newton-Raphson
 The implemented test system consists of a three-bus transmission network with one slack bus and two load (PQ) buses. The transmission lines are modeled using their series impedance, from which the Y-Bus admittance matrix is automatically constructed.
 
 <p align="center">
-<img src="Images/single_line_diagram.png" width="700">
+<img src="Images/single_line_diagram.png" width="400">
 </p>
 
 ## 📐 Mathematical Background
@@ -136,7 +136,7 @@ The Newton-Raphson algorithm converges within a few iterations for the implement
 ### Voltage Profile
 
 <p align="center">
-<img src="Images/voltage_profile.png" width="700">
+<img src="Images/voltage_profile.png" width="400">
 </p>
 
 ---
@@ -144,7 +144,7 @@ The Newton-Raphson algorithm converges within a few iterations for the implement
 ### Y-Bus Matrix
 
 <p align="center">
-<img src="Images/ybus_matrix.png" width="700">
+<img src="Images/ybus_matrix.png" width="400">
 </p>
 
 ---
@@ -152,7 +152,7 @@ The Newton-Raphson algorithm converges within a few iterations for the implement
 ### Bus Voltage Results
 
 <p align="center">
-<img src="Images/bus_results.png" width="700">
+<img src="Images/bus_results.png" width="400">
 </p>
 
 ---
@@ -160,7 +160,7 @@ The Newton-Raphson algorithm converges within a few iterations for the implement
 ### Line Flow Results
 
 <p align="center">
-<img src="Images/line_flow_results.png" width="700">
+<img src="Images/line_flow_results.png" width="400">
 </p>
 
 ## 👨‍💻 Author
