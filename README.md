@@ -121,6 +121,12 @@ The Jacobian matrix is used to update bus voltage magnitudes and voltage angles 
 9. Plot the voltage profile.
 10. Export the results.
 
+## 🔄 Project Workflow
+
+<p align="center">
+<img src="Images/project_workflow.png" width="900">
+</p>
+
 ## 🚀 Getting Started
 
 ### Prerequisites
