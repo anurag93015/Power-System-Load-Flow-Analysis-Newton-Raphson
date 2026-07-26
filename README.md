@@ -187,7 +187,7 @@ After execution, the program generates:
 ### Y-Bus Matrix
 
 <p align="center">
-<img src="Images/ybus_matrix.png" width="600">
+<img src="Images/ybus_matrix.png" width="700">
 </p>
 
 ---
@@ -203,7 +203,7 @@ After execution, the program generates:
 ### Line Flow Results
 
 <p align="center">
-<img src="Images/line_flow_results.png" width="600">
+<img src="Images/line_flow_results.png" width="700">
 </p>
 
 ## 👨‍💻 Author
